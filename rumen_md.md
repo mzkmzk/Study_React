@@ -18,3 +18,4 @@
 ![bower_components](QQ20160125-3.png)
 
 其实很简单.就是下载了react jquery bootstrap 在bower_components里而已
+

@@ -4,7 +4,7 @@
 
 观看<http://tagtree.tv/thinking-in-react>视频学习
 
-##1. 配置环境
+##1.1 配置环境
 
 创建文件夹
 

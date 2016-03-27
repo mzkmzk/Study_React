@@ -5,6 +5,8 @@
     
     1. createClass用于生成组件(组件名首字母必须大写 & 组件只能有一个顶级标签)
     2. render用于输出组件
+3. `this.props.属性` 获取调用本组件时候定义的属性
+4. 定义`class`属性时,要写成`className`,定义`for`属性时,要写成`htmlFor`
 
 
 ## 参考资源

@@ -25,4 +25,3 @@
 ## 1.疑惑点
 
 1. 在html中使用JSX,script.type必须声明为`text/babel`并且引入babel-core
-2. 

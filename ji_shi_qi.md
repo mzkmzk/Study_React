@@ -38,4 +38,3 @@
 2. `this.props.属性` : 外部调用本组件传递的属性值.
 2. `React.createClass中的render` : 返回的为该组件显示的内容
 3. `ReactDOM.render(显示的组件,带插入的节点)`
-4. 

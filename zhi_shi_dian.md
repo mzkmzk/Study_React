@@ -14,3 +14,8 @@
 4. componentDidUpdate(object preProps,object preState)
 5. componentWillUnmount()
 
+React特殊状态的处理函数
+
+1. componentWillReceiveProps(object nextProps)：已加载组件收到新的参数时调用
+2. shouldComponentUpdate(object nextProps, object nextState)：组件判断是否重新渲染时调用
+

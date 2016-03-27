@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [入门](rumen_md.md)
    * [案例](an_li.md)
-       * 计时器
+       * [计时器](ji_shi_qi.md)
        * [JSX_Hello_World](jsxhello_world.md)
    * [知识点](zhi_shi_dian.md)
 * [源码分析](yuan_ma_fen_xi.md)

@@ -8,7 +8,7 @@
     3. `propTypes`: 验证组件实例的属性是否符合要求,验证标准<http://facebook.github.io/react/docs/reusable-components.html>
     4. `getDefaultProps`: 设置组件属性的默认值
     5. `getInitialState`: 定义初始状态
-    6. `state`: 读取属性`this.state`,设置属性`this.setState`,每次修改状态,this.render会再次执行
+    6. `state`: 读取属性`this.state`,设置属性`this.setState`,每次修改状态,`this.render`会再次执行
 3. `this.props.属性` 获取调用本组件时候定义的属性
 4. 定义`class`属性时,要写成`className`,定义`for`属性时,要写成`htmlFor`
 5. `this.props.children`: 表示组件的所有子节点,可用`React.Children.map(this.props.children,function(child){...})`遍历所有子节点.

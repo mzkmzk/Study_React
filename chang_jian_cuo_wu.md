@@ -20,6 +20,22 @@ this.props.fields.map(function(value){
 });
 ```
 
+生成的li长这样
+
+![](QQ20160328-0.png)
+
+然后我往li里放了一个key
+
+```javascript
+this.props.fields.map(function(value,index){
+    return (
+        <li key="{index}">
+            ...
+        </li>
+    )
+});
+```
+
 我是根据JSON然后生成多个li元素,但是React建议我为每个li添加一个key元素
 
 React为什么建议我们这样做,是为了让li更快的排序和摧毁.(笔者有点奇怪,react默认会生成reactid啊,为啥还要让我们自定义key)

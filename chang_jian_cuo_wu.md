@@ -22,7 +22,7 @@ this.props.fields.map(function(value){
 
 我是根据JSON然后生成多个li元素,但是React建议我为每个li添加一个key元素
 
-React为什么建议我们这样做,其实是为了我们之后可以获取到这个li
+React为什么建议我们这样做,是为了让li更快的排序和摧毁.
 
 
 

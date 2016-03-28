@@ -7,3 +7,16 @@
 ```xml
 Warning: Each child in an array or iterator should have a unique "key" prop.
 ```
+
+我原先的代码是这样的
+
+
+```javascript
+this.props.fields.map(function(){
+    return (
+        <li>
+            ...
+        </li>
+    )
+});
+```

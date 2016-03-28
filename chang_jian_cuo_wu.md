@@ -29,7 +29,7 @@ this.props.fields.map(function(value){
 ```javascript
 this.props.fields.map(function(value,index){
     return (
-        <li key="{index}">
+        <li key="{index+3}">
             ...
         </li>
     )

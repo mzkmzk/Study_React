@@ -24,6 +24,10 @@ this.props.fields.map(function(value){
 
 React为什么建议我们这样做,是为了让li更快的排序和摧毁.(笔者有点奇怪,react默认会生成reactid啊,为啥还要让我们自定义key)
 
+假如往ul里放li,应该在ul里定义的li放key.
+
+例如当li又是一个React组件,在li组件返回li中定义key是不好的,应该在ul中明显调用这个组件时就定义key
+
 
 
 参考资料

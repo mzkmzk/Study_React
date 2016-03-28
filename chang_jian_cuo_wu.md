@@ -12,7 +12,7 @@ Warning: Each child in an array or iterator should have a unique "key" prop.
 
 
 ```javascript
-this.props.fields.map(function(){
+this.props.fields.map(function(value){
     return (
         <li>
             ...
@@ -21,3 +21,8 @@ this.props.fields.map(function(){
 });
 ```
 
+我是根据JSON然后生成多个li元素,但是React建议我为每个li添加一个key元素
+
+参考资料
+
+<http://facebook.github.io/react/docs/multiple-components.html#dynamic-children>

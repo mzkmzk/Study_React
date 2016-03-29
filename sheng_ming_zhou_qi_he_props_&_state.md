@@ -76,8 +76,7 @@ React_DOM.render(
 发现是结果是这样的
 
 
-![](QQ20160329-3.png)
-
+![](QQ20160329-32.png)
 
 ## 3.结论
 这些结果可以得出,只有在执行render时候或者`shouldComponentUpdate`返回false之后,新改变的props和state才会得到改变.

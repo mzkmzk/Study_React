@@ -1,4 +1,4 @@
-# 生命周期和props & state
+# React生命周期和props & state
 
 ## 1. 问题
 

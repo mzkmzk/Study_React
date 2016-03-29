@@ -19,7 +19,7 @@ React特殊状态的处理函数
 1. componentWillReceiveProps(object nextProps)：已加载组件收到新的参数时调用
 2. shouldComponentUpdate(object nextProps, object nextState)：组件判断是否重新渲染时调用
 
-![react声明浊气](3-3-component-lifecycle.jpg)
+![react声明周期](3-3-component-lifecycle.jpg)
 
 
 ## 2. 坑点

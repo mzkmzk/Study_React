@@ -7,6 +7,7 @@
 先看看一看React的生命周期图
 
 ![React声明周期图](3-3-component-lifecycle.jpg)
+(图片引自<http://www.race604.com/react-native-component-lifecycle/>)
 
 在第一次加载React组件时,我通过componentDidMount里执行ajax来更新state,这里没有问题
 

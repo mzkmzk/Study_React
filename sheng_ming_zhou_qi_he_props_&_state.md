@@ -81,3 +81,28 @@ React_DOM.render(
 ## 3.结论
 这些结果可以得出,只有在执行render时候或者`shouldComponentUpdate`返回false之后,新改变的props和state才会得到改变.
 
+## 4. 解决方式
+
+现在问题就来了
+
+我新进来的props要在render或者`shouldComponentUpdate`返回false之后才会得到更新.
+
+因为我的数据要通过ajax更新state的.
+
+所以我的解决方式是 当如果判断如果只是props改变,则不继续执行,但是同时`componentWillReceiveProps`会发出ajax请求,ajax返回后更新state然后才执行render
+
+解决代码
+
+```javascript
+ componentWillReceiveProps: function(nextProps){
+            this.getInfos(nextProps);
+ },
+
+shouldComponentUpdate: function(nextProps,nextState) {
+    if(nextProps != this.props){
+        return false;
+    }
+    return true;
+},
+
+```

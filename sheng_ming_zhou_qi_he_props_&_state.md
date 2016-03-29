@@ -94,9 +94,9 @@ React_DOM.render(
 解决代码
 
 ```javascript
- componentWillReceiveProps: function(nextProps){
-            this.getInfos(nextProps);
- },
+componentWillReceiveProps: function(nextProps){
+          this.getInfos(nextProps);
+},
 
 shouldComponentUpdate: function(nextProps,nextState) {
     if(nextProps != this.props){

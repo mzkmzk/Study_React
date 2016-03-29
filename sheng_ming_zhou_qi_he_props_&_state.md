@@ -95,7 +95,7 @@ React_DOM.render(
 
 ```javascript
 componentWillReceiveProps: function(nextProps){
-          this.getInfos(nextProps);
+    this.getInfos(nextProps);//ajax请求
 },
 
 shouldComponentUpdate: function(nextProps,nextState) {

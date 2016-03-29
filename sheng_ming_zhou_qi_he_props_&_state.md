@@ -1,4 +1,4 @@
-# 声明周期和props & state
+# 生命周期和props & state
 
 ## 1. 问题
 

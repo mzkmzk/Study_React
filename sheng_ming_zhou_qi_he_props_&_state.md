@@ -12,7 +12,7 @@
 
 关键是我点击了刷新,通过props传递给react一个id,然后根据id执行ajax刷新state.这时就出现当前props不是新传递进来的props引起的问题
 
-先看看传递的id的代码
+先看看点击刷新后执行的传递id代码
 
 ```javascript
  console.log("new params" + index);

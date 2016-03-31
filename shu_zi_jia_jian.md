@@ -141,3 +141,8 @@ export default function counter(state = 0, action) {
 
 ![Refux架构图](QQ20160331-1.png)
 
+1. Views层比较简单,就是我们在定义组件时`render`显示的views
+2. Actuib Creators: 在调用组件时,定义了具体的点击时,会引发的action
+3. Action: 注意定义的reducers,表示之前传过来要执行action,具体要改变哪一些store
+
+

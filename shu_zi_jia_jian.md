@@ -122,7 +122,6 @@ store.subscribe(render)
 
 ## 4.reducers 
 
-
 ```javascript
 export default function counter(state = 0, action) {
   switch (action.type) {
@@ -137,4 +136,8 @@ export default function counter(state = 0, action) {
 ```
 
 这里主要处理state的状态.
+
+## 5.结合本例子说说Redux的架构图
+
+![Refux架构图](QQ20160331-1.png)
 

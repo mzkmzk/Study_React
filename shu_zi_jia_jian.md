@@ -114,3 +114,8 @@ store.subscribe(render)
 在调用组件时
 
 定义了其特殊的方法
+
+注意点主要有以下几个
+
+1. `const store = createStore(counter)`获取统一的store
+2. `store.subscribe(render)`: 将render函数传递给store.subscribe

@@ -7,6 +7,7 @@
 2. 点击`increment if odd `:当数字为奇数时才增加数字
 3. `incrementAsync` 点击后1秒,数字才会增加. 
 
+## 1. html
 首先`html`上只是定义了一个节点,和引用JS
 
 ```html
@@ -22,4 +23,69 @@
   </body>
 </html>
 ```
+
+## 2.定义组件
+
+这里主要负责View的显示,JS的触发哪个事件在这里只是占了个位,一些通用的组件方法可以放在这里,具体设置化的可以通过props传入
+
+```javascript
+import React, { Component, PropTypes } from 'react'
+
+class Counter extends Component {
+  constructor(props) {
+    super(props)
+    this.incrementAsync = this.incrementAsync.bind(this)
+    this.incrementIfOdd = this.incrementIfOdd.bind(this)
+  }
+
+  incrementIfOdd() {
+    if (this.props.value % 2 !== 0) {
+      this.props.onIncrement()
+    }
+  }
+
+  incrementAsync() {
+    setTimeout(this.props.onIncrement, 1000)
+  }
+
+  render() {
+    const { value, onIncrement, onDecrement } = this.props
+    return (
+      <p>
+        Clicked: {value} times
+        {' '}
+        <button onClick={onIncrement}>
+          +
+        </button>
+        {' '}
+        <button onClick={onDecrement}>
+          -
+        </button>
+        {' '}
+        <button onClick={this.incrementIfOdd}>
+          Increment if odd
+        </button>
+        {' '}
+        <button onClick={this.incrementAsync}>
+          Increment async
+        </button>
+      </p>
+    )
+  }
+}
+
+Counter.propTypes = {
+  value: PropTypes.number.isRequired,
+  onIncrement: PropTypes.func.isRequired,
+  onDecrement: PropTypes.func.isRequired
+}
+
+export default Counter
+
+```
+
+## 3.调用组件
+
+
+
 

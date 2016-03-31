@@ -119,3 +119,21 @@ store.subscribe(render)
 
 1. `const store = createStore(counter)`获取统一的store
 2. `store.subscribe(render)`: 将render函数传递给store.subscribe
+
+## 4.reducers 
+
+
+```javascript
+export default function counter(state = 0, action) {
+  switch (action.type) {
+    case 'INCREMENT':
+      return state + 1
+    case 'DECREMENT':
+      return state - 1
+    default:
+      return state
+  }
+}
+```
+
+这里主要处理state的状态.

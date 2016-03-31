@@ -137,3 +137,4 @@ export default function counter(state = 0, action) {
 ```
 
 这里主要处理state的状态.
+

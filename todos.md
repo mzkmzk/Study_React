@@ -10,5 +10,5 @@
 3. 右边的`x`会删除tudo
 4. 左下角会显示剩余多少todo
 5. 中下部,显示不同状态的tudo
-6. 右下角的clear completed 表示删除已经完成的tudo
+6. 右下角的clear completed,点击删除已经完成的tudo
 

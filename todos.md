@@ -11,6 +11,8 @@
 4. 左下角会显示剩余多少todo
 5. 中下部,显示不同状态的tudo
 6. 右下角的clear completed,点击删除已经完成的tudo,有选中勾勾的todo才会显示
+7. 双击tudo,可编辑
+
 
 
 

@@ -13,10 +13,10 @@
 * [常用站点](chang_yong_zhan_dian.md)
 * [Redux](redux.md)
    * [API](api.md)
+   * [React_Redux_API](reactredux_api.md)
    * [案例](redux_an_li.md)
        * [数字加减](shu_zi_jia_jian.md)
        * [Todos](todos_.md)
        * [TODOMVC](todos.md)
    * [开发步骤](kai_fa_bu_zou.md)
-   * [React_Redux_API](reactredux_api.md)
 

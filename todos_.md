@@ -21,4 +21,7 @@
 1. `dispatch(addTodo(input.value))`;
 2. `AddTodo = connect()(AddTodo)`: 将`AddTodo`组件里的dispath和Redux连接起来
 
+`connect()(AppTodo)`的作用就是将AddTodo组件中的dispath交给Redux处理.
+
 View层就就是发送这个通知,后面的事情就不得而知了.
+

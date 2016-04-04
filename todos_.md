@@ -299,3 +299,43 @@ OMG,这里定义的`mapStateToProps`和`mapDispatchToProps`都多了一个`ownPr
 1. `mapStateToProps`: 如果指定了该回调函数中的第二个参数 ownProps，则该参数的值为传递到组件的 props，而且只要组件接收到新的 props，mapStateToProps 也会被调用
 2. `mapDispatchToProps`: 如果指定了该回调函数中第二个参数 ownProps，该参数的值为传递到组件的 props，而且只要组件接收到新 props，mapDispatchToProps 也会被调用
 
+啥意思啊..没动啊T_T..继续结合本例说明下
+
+先看看`mapStateToProps`: 
+
+```javascript
+const mapStateToProps = (state, ownProps) => {
+  return {
+    active: ownProps.filter === state.visibilityFilter
+  }
+}
+```
+
+返回的这个应该是当前标签正在选择哪个分类
+
+看看标签原来的View`<FilterLink filter="SHOW_ALL">`
+
+OK,这里就是判断本身的filter是否等于store中的filter,从而设置样式
+
+至于改变当前store的状态,当然交给`mapDispatchToProps`
+
+```javascript
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    onClick: () => {
+      dispatch(setVisibilityFilter(ownProps.filter))
+    }
+  }
+}
+```
+
+action也是简单的发送内容给reducer参考而已
+
+```javascript
+export const setVisibilityFilter = (filter) => {
+  return {
+    type: 'SET_VISIBILITY_FILTER',
+    filter
+  }
+}
+```

@@ -265,3 +265,9 @@ case 'TOGGLE_TODO':
 
 额..就是这样..更改了state,接下来store更改后触发的UI更改就交给每个组件的`mapStateToProps`啦
 
+## 3.分类显示
+
+最下面可以选择标签,分类显示
+
+思路很简单,store存储`filter`,因为在ul中已经定义了各filter应该显示啥了,所以这里只要更改store中`filter`的状态即可,剩下的自己组件各自玩各自的
+

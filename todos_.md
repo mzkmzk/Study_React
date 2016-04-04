@@ -203,3 +203,35 @@ const TodoList = ({ todos, onTodoClick }) => (
 2. key: React建议对每个循环的组件都加上key
 3. `{...todo}`,就是把todo定义的所有东西,都赋值给当前的组件Todo
 4. onClick: 就是调用容器定义好的方法而已.
+
+接下来是`todo.js`,
+
+```javascript
+const Todo = ({ onClick, completed, text }) => (
+  <li
+    onClick={onClick}
+    style={{
+      textDecoration: completed ? 'line-through' : 'none'
+    }}
+  >
+    {text}
+  </li>
+)
+```
+
+到这里,要显示View和Action Creator已经说完了,但是这里还有一个更新store的操作没说完
+
+点击单个todo,状态取反,这也是要更改store的
+
+这其实在容器定义的点击事情中
+
+```javascript
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onTodoClick: (id) => {
+      dispatch(toggleTodo(id))
+    }
+  }
+}
+```
+

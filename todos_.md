@@ -101,6 +101,19 @@ OK 我们已经提交todo到store啦.
 我们这里先定义容器组件,这里的容器组件,作用是筛选要显示的todo和设定dispath
 
 ```javascript
+
+const getVisibleTodos = (todos, filter) => {
+
+  switch (filter) {
+    case 'SHOW_ALL':
+      return todos
+    case 'SHOW_COMPLETED':
+      return todos.filter(t => t.completed)
+    case 'SHOW_ACTIVE':
+      return todos.filter(t => !t.completed)
+  }
+}
+
 const mapStateToProps = (state) => {
   return {
     todos: getVisibleTodos(state.todos, state.visibilityFilter)
@@ -122,3 +135,4 @@ const VisibleTodoList = connect(
 
 export default VisibleTodoList
 ```
+

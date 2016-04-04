@@ -45,3 +45,9 @@ export const addTodo = (text) => {
 
 恩.通过这里我知道增加一个todo,他的id是`nextTodoId++`,内容为text
 
+然后呢?这就改变了传说中Redux的store了吗.啊.同志们别着急.
+
+我们之前在view里写的是`dispatch(addTodo(input.value))`
+
+所以要把这个addTodo返回的内容,通过dispath发送给Store啊.
+

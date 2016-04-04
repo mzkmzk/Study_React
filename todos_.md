@@ -73,3 +73,8 @@ const todos = (state = [], action) => {
   }
 }
 ```
+
+这里的`...state`是原先包含的`todos`啦,加上新来的嘛,这就是新的state
+
+OK 我们已经提交todo到store啦.
+

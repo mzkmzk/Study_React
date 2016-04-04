@@ -97,3 +97,28 @@ OK 我们已经提交todo到store啦.
 | 读取数据   | 从 Redux 获取 state   | 从 props 获取数据     |
 | 修改数据   | 向 Redux 发起 actions | 从 props 调用回调函数 |
 
+
+我们这里先定义容器组件,这里的容器组件,作用是筛选要显示的todo和设定dispath
+
+```javascript
+const mapStateToProps = (state) => {
+  return {
+    todos: getVisibleTodos(state.todos, state.visibilityFilter)
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onTodoClick: (id) => {
+      dispatch(toggleTodo(id))
+    }
+  }
+}
+
+const VisibleTodoList = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TodoList)
+
+export default VisibleTodoList
+```

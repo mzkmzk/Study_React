@@ -12,3 +12,13 @@
 
 ## 2.1 添加todo
 
+添加todo的思路就是
+
+点点击`Add Todo`时,当文本框分空,即提交todo
+
+就是执行
+
+1. `dispatch(addTodo(input.value))`;
+2. `AddTodo = connect()(AddTodo)`: 将`AddTodo`组件里的dispath和Redux连接起来
+
+View层就就是发送这个通知,后面的事情就不得而知了.

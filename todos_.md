@@ -183,7 +183,7 @@ export default VisibleTodoList
 
 就本例子来说
 
-`mapStateToProps`返回了一个`todos`,这个todos就是ul中药显示的内容,但是在本容器中已经筛选好了.
+`mapStateToProps`返回了一个`todos`,这个todos就是ul中要显示的内容,但是在本容器中已经筛选好了.
 
 凡是store发生了变化,`mapStateToProps`都会执行,所以这里可以解决我们在`1`最后提的问题可以解决.
 

@@ -78,3 +78,5 @@ const todos = (state = [], action) => {
 
 OK 我们已经提交todo到store啦.
 
+但是我们在下面的ul中添加新的todo啊..咋设置它呢?
+

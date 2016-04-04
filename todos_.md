@@ -53,3 +53,23 @@ export const addTodo = (text) => {
 
 啊Store里收到action给我返回的内容,我应该怎么改变自己的内容啊 T_T..
 
+这里就是通过`reducer`拉.
+
+```javascript
+const todos = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return [
+        ...state,
+        {
+        id: action.id,
+        text: action.text,
+        completed: false
+        }
+      ]
+    ...
+    default:
+      return state
+  }
+}
+```

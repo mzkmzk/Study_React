@@ -142,4 +142,5 @@ export default VisibleTodoList
 2. mapDispatchToProps: 返回一个Object|Function
 
     1. 返回Object: 对象里的函数都是Redux action creator,而且这个Object会与store绑定在一起,其定义的方法名作为属性名合并到组件的props中.
+    2. 返回Function: 该函数会接受dispath函数,然后再由你决定如何返回一个对象,这个对象通过dispath与action creator绑定在一起.
 

@@ -1,6 +1,9 @@
 # Todos
 
 ![todo](QQ20160403-0.png)
+# 0.本Demo来源
+
+<https://github.com/reactjs/redux>
 
 # 1. 功能解析
 
@@ -15,6 +18,37 @@
 添加todo的思路就是
 
 点点击`Add Todo`时,当文本框不为空,即提交todo
+
+瞄瞄代码
+
+```javascript
+let AddTodo = ({ dispatch}) => {
+  let input
+
+  return (
+    <div>
+      <form onSubmit={e => {
+        e.preventDefault()
+        if (!input.value.trim()) {
+          return
+        }
+        dispatch(addTodo(input.value))
+        input.value = ''
+      }}>
+        <input ref={node => {
+          input = node
+        }} />
+        <button type="submit">
+          Add Todo
+        </button>
+      </form>
+    </div>
+  )
+}
+AddTodo = connect()(AddTodo)
+
+export default AddTodo
+```
 
 就是执行
 

@@ -8,4 +8,7 @@
 2. 点击todo,切换active|completed状态
 3. 分类显示
 
-# 2. 
+# 2. 功能点解析
+
+## 2.1 添加todo
+

@@ -339,3 +339,18 @@ export const setVisibilityFilter = (filter) => {
   }
 }
 ```
+
+reducer就是改变store,更简单了..
+
+
+```javascript
+const visibilityFilter = (state = 'SHOW_ALL', action) => {
+  switch (action.type) {
+    case 'SET_VISIBILITY_FILTER':
+      return action.filter
+    default:
+      return state
+  }
+}
+
+```

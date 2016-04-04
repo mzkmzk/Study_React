@@ -14,7 +14,7 @@
 
 添加todo的思路就是
 
-点点击`Add Todo`时,当文本框分空,即提交todo
+点点击`Add Todo`时,当文本框不为空,即提交todo
 
 就是执行
 
@@ -151,7 +151,7 @@ export default VisibleTodoList
 
 `mapStateToProps`返回了一个`todos`,这个todos就是ul中药显示的内容,但是在本容器中已经筛选好了.
 
-凡是store发送了变化,`mapStateToProps`都会执行,所以这里可以解决我们在`1`最后提的问题可以解决.
+凡是store发生了变化,`mapStateToProps`都会执行,所以这里可以解决我们在`1`最后提的问题可以解决.
 
 当添加todo,如果在ul中及时更新
 
@@ -178,7 +178,7 @@ OK,这里就是包装容器啦,把之前定义的东西与Redux connect起来,�
 
 大家有没有对这个容器有点想法,接下来这个`TodoList`要做的事情,已经在容器中做好了?
 
-接下来`TodoList`只是使用这个筛选功能和状态取反功能.
+接下来`TodoList`只是`使用`这个筛选功能和状态取反功能.
 
 看看`TodoList.js`
 

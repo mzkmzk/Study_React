@@ -176,4 +176,30 @@ const VisibleTodoList = connect(
 
 OK,这里就是包装容器啦,把之前定义的东西与Redux connect起来,并调用`TodoList`
 
+大家有没有对这个容器有点想法,接下来这个`TodoList`要做的事情,已经在容器中做好了?
 
+接下来`TodoList`只是使用这个筛选功能和状态取反功能.
+
+看看`TodoList.js`
+
+```javascript
+const TodoList = ({ todos, onTodoClick }) => (
+  <ul>
+    {todos.map(todo =>
+      <Todo
+        key={todo.id}
+        {...todo}
+        onClick={() => onTodoClick(todo.id)}
+      />
+
+    )}
+  </ul>
+)
+```
+
+这里有几个解释的点
+
+1. 参数`todos`和`onTodoClick`: 都是之前在容器中定义好的
+2. key: React建议对每个循环的组件都加上key
+3. `{...todo}`,就是把todo定义的所有东西,都赋值给当前的组件Todo
+4. onClick: 就是调用容器定义好的方法而已.

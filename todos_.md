@@ -271,3 +271,25 @@ case 'TOGGLE_TODO':
 
 思路很简单,store存储`filter`,因为在ul中已经定义了各filter应该显示啥了,所以这里只要更改store中`filter`的状态即可,剩下的自己组件各自玩各自的
 
+还是先看看底部分类标签容器做了啥触发函数
+
+```javascript
+const mapStateToProps = (state, ownProps) => {
+  return {
+    active: ownProps.filter === state.visibilityFilter
+  }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    onClick: () => {
+      dispatch(setVisibilityFilter(ownProps.filter))
+    }
+  }
+}
+
+const FilterLink = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Link)
+```

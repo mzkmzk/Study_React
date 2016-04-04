@@ -235,3 +235,33 @@ const mapDispatchToProps = (dispatch) => {
 }
 ```
 
+看看action.js怎么玩的
+
+```javascript
+export const toggleTodo = (id) => {
+  return {
+    type: 'TOGGLE_TODO',
+    id
+  }
+}
+```
+
+action主要传输与更改store相关的属性,供reducer选择怎么更改store
+
+我们点击单个todo后,就会通过`dispatch(toggleTodo(id))`,把这个action传送到reducer辣..接着它自己玩吧..看看reducer是怎么实现该操作的
+
+```javascript
+case 'TOGGLE_TODO':
+      return state.map(t =>
+         if (t.id !== action.id) {
+        return state
+      }
+
+      return Object.assign({}, t, {
+        completed: !t.completed
+      })
+      )
+```
+
+额..就是这样..更改了state,接下来store更改后触发的UI更改就交给每个组件的`mapStateToProps`啦
+

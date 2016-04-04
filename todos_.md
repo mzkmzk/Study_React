@@ -296,3 +296,6 @@ const FilterLink = connect(
 
 OMG,这里定义的`mapStateToProps`和`mapDispatchToProps`都多了一个`ownProps`参数啊,,啥意思啊,,继续看看神一样的API..
 
+1. `mapStateToProps`: 如果指定了该回调函数中的第二个参数 ownProps，则该参数的值为传递到组件的 props，而且只要组件接收到新的 props，mapStateToProps 也会被调用
+2. `mapDispatchToProps`: 如果指定了该回调函数中第二个参数 ownProps，该参数的值为传递到组件的 props，而且只要组件接收到新 props，mapDispatchToProps 也会被调用
+

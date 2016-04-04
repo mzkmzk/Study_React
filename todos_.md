@@ -144,3 +144,18 @@ export default VisibleTodoList
     1. 返回Object: 对象里的函数都是Redux action creator,而且这个Object会与store绑定在一起,其定义的方法名作为属性名合并到组件的props中.
     2. 返回Function: 该函数会接受dispath函数,然后再由你决定如何返回一个对象,这个对象通过dispath与action creator绑定在一起.
 
+
+真是发现上面说的都是鬼话..
+
+就本例子来说
+
+`mapStateToProps`返回了一个`todos`,这个todos就是ul中药显示的内容,但是在本容器中已经筛选好了.
+
+凡是store发送了变化,`mapStateToProps`都会执行,所以这里可以解决我们在`1`最后提的问题可以解决.
+
+当添加todo,如果在ul中及时更新
+
+因为当添加新todo,store就会发生改变,这里就会触发`mapStateToProps`,`mapStateToProps`会重新帮我们筛选一遍要显示的todo
+
+
+

@@ -293,3 +293,6 @@ const FilterLink = connect(
   mapDispatchToProps
 )(Link)
 ```
+
+OMG,这里定义的`mapStateToProps`和`mapDispatchToProps`都多了一个`ownProps`参数啊,,啥意思啊,,继续看看神一样的API..
+

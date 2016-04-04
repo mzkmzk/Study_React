@@ -25,3 +25,23 @@
 
 View层就就是发送这个通知,后面的事情就不得而知了.
 
+这个文本框和提交按钮的任务就完成了,只负责提交内容,store里的变化与它无关
+
+OK,但是这个addTodo(input.value)究竟咋执行啊
+
+`addTodo`的实现方法放在action中.
+
+```javascript
+export const addTodo = (text) => {
+  return {
+    type: 'ADD_TODO',
+    id: nextTodoId++,
+    text
+  }
+}
+```
+
+啊..action就是定义了这些东西..action指定了动作的类型,和传输的数据.
+
+恩.通过这里我知道增加一个todo,他的id是`nextTodoId++`,内容为text
+

@@ -90,3 +90,4 @@ OK 我们已经提交todo到store啦.
 | 使用 Redux | 是                    | 否                    |
 | 读取数据   | 从 Redux 获取 state   | 从 props 获取数据     |
 | 修改数据   | 向 Redux 发起 actions | 从 props 调用回调函数 |
+

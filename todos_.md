@@ -157,5 +157,23 @@ export default VisibleTodoList
 
 因为当添加新todo,store就会发生改变,这里就会触发`mapStateToProps`,`mapStateToProps`会重新帮我们筛选一遍要显示的todo
 
+然后
+
+`mapDispatchToProps`返回了一个`{onTodoClick}`,那就是返回一个对象咯.
+
+按照上面的鬼意思说明,当返回的是Object,对象里的函数都是Redux action creator,而且这个Object会与store绑定在一起,其定义的方法名作为属性名合并到组件的props中.
+
+OK,现在我们知道`{onTodoClick}`被绑定在store中,而`onTodoClick`被合并到props中.
+
+喂~,Redux,你无聊么,这样搞干嘛...看官,别着急,接着看,该容器的最后一段函数
+
+```javascript
+const VisibleTodoList = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TodoList)
+```
+
+OK,这里就是包装容器啦,把之前定义的东西与Redux connect起来,并调用`TodoList`
 
 

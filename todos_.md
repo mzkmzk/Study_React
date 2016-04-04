@@ -139,5 +139,7 @@ export default VisibleTodoList
 这里主要设定了两个函数
 
 1. mapStateToProps: 当store 发生改变，mapStateToProps 被调用。mapStateToProps必须返回一个纯对象，这个对象会与组件的 props 合并.
-2. mapDispatchToProps
+2. mapDispatchToProps: 返回一个Object|Function
+
+    1. 返回Object: 对象里的函数都是Redux action creator,而且这个Object会与store绑定在一起,其定义的方法名作为属性名合并到组件的props中.
 

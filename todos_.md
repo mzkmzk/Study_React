@@ -51,3 +51,5 @@ export const addTodo = (text) => {
 
 所以要把这个addTodo返回的内容,通过dispath发送给Store啊.
 
+啊Store里收到action给我返回的内容,我应该怎么改变自己的内容啊 T_T..
+

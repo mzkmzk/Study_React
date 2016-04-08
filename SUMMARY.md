@@ -17,7 +17,7 @@
    * [案例](redux_an_li.md)
        * [数字加减](shu_zi_jia_jian.md)
        * [Todos](todos_.md)
-       * [TODOMVC](todos.md)
        * [统计table选择列总数](tong_ji_table_xuan_ze_lie_zong_shu.md)
+       * [TODOMVC](todos.md)
    * [开发步骤](kai_fa_bu_zou.md)
 

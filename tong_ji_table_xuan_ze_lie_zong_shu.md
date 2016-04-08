@@ -43,6 +43,8 @@ Views通过用户的交互而触发了`Action Creators`
 
 然后容器可以根据组件所要满足的功能,然后一层层的把部分`action creator`和`state`往组件传递
 
+
+
 ## 使用步骤
 
 1. 等待重构师出HTML静态页面

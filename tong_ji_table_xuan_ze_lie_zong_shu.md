@@ -78,6 +78,8 @@ exports.orderUsers = function(state = initialState , action) {
 
 reduce里都会返回一个完整的全局state,我们只需要筛选出被勾选的那列,然后对其`selected`属性取反即可
 
+## 6. action
+
 
 
 ## 使用步骤

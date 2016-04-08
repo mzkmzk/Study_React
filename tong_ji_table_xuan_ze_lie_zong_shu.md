@@ -87,7 +87,16 @@ OK,我们知道当用户点击勾选之后,reduce要根据id来更改store.
 1. 发生的勾选事件
 2. 被勾选的ID是
 
+所以在action中
 
+```javascript
+exports.selecOrdertUser = function(id){
+        return {
+            type: "SELECT_USER",
+            id: id
+        }
+    }
+```
 
 ## 使用步骤
 

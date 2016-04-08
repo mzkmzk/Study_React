@@ -10,3 +10,9 @@
 
 ![Redux的架构图](TB1SsWQLFXXXXXMXVXXXXXXXXXX-1170-514.jpg_600x600.jpg)
 
+Views通过用户的交互而触发了`Action Creators`
+
+`Action Creators`的作用就是return一个`Action`
+
+`Action`一般为一个数据对象,该数据对象的作用是给reducer作为参考,如何改变Store
+

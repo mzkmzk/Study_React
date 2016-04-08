@@ -141,6 +141,10 @@ exports.selecOrdertUser = function(id){
     )(ActivityOrder);
 ```
 
+估计会懵逼的点
+
+1. `mapStateToProps`: 当state发生变化后,触发该方法,返回需要给组件使用的state.
+2. 
 ## 使用步骤
 
 1. 等待重构师出HTML静态页面

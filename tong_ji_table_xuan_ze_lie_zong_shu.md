@@ -161,7 +161,38 @@ exports.selecOrdertUser = function(id){
 
 `OrderTable`再把`orderUsers={orderUsers}`传递给`OrderTableBody`
 
+当`OrderTableBody`获取到`orderUsers`以后,如何生成相对应li
 
+```javascript
+class OrderTableBody extends Component {
+        render() {
+            const { orderUsers, selectOrderUser } = this.props
+
+            return (
+                <div className="tbody">
+                    <ul>
+                        {
+                            orderUsers.map(orderUser =>
+                                    <li key={orderUser.id}>
+                                        <a href="entry_detail.html">
+                                            <span className="a"><div className="img"><img src={orderUser.title} /></div></span>
+                                            <span className="b">{orderUser.name}</span>
+                                            <span className="c">{orderUser.ticket}</span>
+                                            <span className="d">{orderUser.price_num}</span>
+                                        </a>
+                                        <span className="e"><div className={classnames({ico: true ,selected: orderUser.selected})} onClick={() => selectOrderUser(orderUser.id)}></div></span>
+                                    </li>
+                            )
+                        }
+
+                    </ul>
+                </div>
+            )
+        }
+    }
+
+    exports.OrderTableBody = OrderTableBody;
+```
 
 
 ## 使用步骤

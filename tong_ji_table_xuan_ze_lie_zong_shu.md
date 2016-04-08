@@ -149,7 +149,7 @@ exports.selecOrdertUser = function(id){
 4. `const {orderUsers,actions} = this.props`: 容器中根据`this.props`获取的就是`mapStateToProps`和`mapDispatchToProps`返回的对象.
 5. 容器就根据全局状态和action,分配给各主键向下传递
 
-## 8.
+## 8. 各组件获取上级传递的部分state和action
 
 
 

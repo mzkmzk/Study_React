@@ -38,3 +38,7 @@ Views通过用户的交互而触发了`Action Creators`
 | 使用 Redux | 是                    | 否                    |
 | 读取数据   | 从 Redux 获取 state   | 从 props 获取数据     |
 | 修改数据   | 向 Redux 发起 actions | 从 props 调用回调函数 |
+
+简单点来说,`action creator`和全局的`state`都是在容器中引用的,然后容器可以根据组件所要满足的功能,然后一层层把部分`action creator`和`state`往组件传递
+
+

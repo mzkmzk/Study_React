@@ -53,6 +53,29 @@ Views通过用户的交互而触发了`Action Creators`
 
 ## 5. 制作reduces
 
+reduces只是用来更改store
+
+这里更改store只有当用户点击勾选时会发生改变.
+
+```javascript
+exports.orderUsers = function(state = initialState , action) {
+        switch (action.type) {
+            case 'SELECT_USER' :
+                return state.map(user =>
+                    user.id === action.id ?
+                        Object.assign({},user,{selected: ! user.selected}) :
+                        user
+                )
+
+            default:
+                return state;
+        }
+
+    }
+```
+
+当用户勾选时,只需要知道这是哪一列被勾选了即可改变store.
+
 
 
 ## 使用步骤

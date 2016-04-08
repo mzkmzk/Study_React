@@ -28,6 +28,7 @@ tou't
 ## 3. 分解View模块
 
 ![View分解](QQ20160408-5.png)
+
 把View分解成这样的组件,然后通过AcitivityOrder这个容器去调用他们.
 
 至于容器和组件的区别有

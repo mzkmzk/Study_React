@@ -16,3 +16,4 @@ Views通过用户的交互而触发了`Action Creators`
 
 `Action`一般为一个数据对象,该数据对象的作用是给reducer作为参考,如何改变Store
 
+

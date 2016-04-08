@@ -48,7 +48,7 @@ tou't
 
 这个例子比较简单
 
-顶级的store只需要保存一个`rderUsers`数组即可
+顶级的store只需要保存一个`orderUsers`数组即可
 
 ![store](QQ20160408-6.png)
 

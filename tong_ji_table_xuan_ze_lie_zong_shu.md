@@ -194,7 +194,10 @@ class OrderTableBody extends Component {
     exports.OrderTableBody = OrderTableBody;
 ```
 
+可能懵逼的点
 
+1. `const { orderUsers, selectOrderUser } = this.props`: orderUsers, selectOrderUser都是从容器中一级级传递下来的
+2. 
 ## 使用步骤
 
 1. 等待重构师出HTML静态页面

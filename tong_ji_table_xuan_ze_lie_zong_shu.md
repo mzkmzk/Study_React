@@ -151,7 +151,11 @@ exports.selecOrdertUser = function(id){
 
 ## 8. 各组件获取上级传递的部分state和action
 
+这里就简单的以`OrderTableBody`这个组件举例
 
+首先搞清楚传递链
+
+`ActivityOrder->OrderTable->OrderTableBody`
 
 
 ## 使用步骤

@@ -157,6 +157,14 @@ exports.selecOrdertUser = function(id){
 
 `ActivityOrder->OrderTable->OrderTableBody`
 
+`ActivityOrder`需要把`orderUsers={orderUsers}`传递给`OrderTable`
+
+然后
+
+`OrderTable`再把`orderUsers={orderUsers}`传递给`OrderTableBody`
+
+
+
 
 ## 使用步骤
 

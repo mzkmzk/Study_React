@@ -18,5 +18,6 @@
        * [数字加减](shu_zi_jia_jian.md)
        * [Todos](todos_.md)
        * [TODOMVC](todos.md)
+       * 统计table选择列总数
    * [开发步骤](kai_fa_bu_zou.md)
 

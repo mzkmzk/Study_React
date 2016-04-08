@@ -51,6 +51,8 @@ Views通过用户的交互而触发了`Action Creators`
 
 ![store](QQ20160408-6.png)
 
+## 5. 制作reduces
+
 
 
 ## 使用步骤

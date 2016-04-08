@@ -41,6 +41,6 @@ Views通过用户的交互而触发了`Action Creators`
 
 简单点来说,`action creator`和全局的`state`都是在容器中引用的
 
-然后容器可以根据组件所要满足的功能,然后一层层把部分`action creator`和`state`往组件传递
+然后容器可以根据组件所要满足的功能,然后一层层的把部分`action creator`和`state`往组件传递
 
 

@@ -78,7 +78,7 @@ exports.orderUsers = function(state = initialState , action) {
 
 reduce里都会返回一个完整的全局state,我们只需要筛选出被勾选的那列,然后对其`selected`属性取反即可
 
-## 6. action
+## 6. 制作action
 
 OK,我们知道当用户点击勾选之后,reduce要根据id来更改store.
 
@@ -97,6 +97,14 @@ exports.selecOrdertUser = function(id){
         }
     }
 ```
+
+## 7.事件嵌入View
+
+好了,我们知道当用户勾选了一列之后,action和reduce要怎么做了.
+
+但是如何在View中定义何时发送action creator的请求呢?
+
+
 
 ## 使用步骤
 

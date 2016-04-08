@@ -98,13 +98,48 @@ exports.selecOrdertUser = function(id){
     }
 ```
 
-## 7.事件嵌入View
+## 7.定义顶级容器
 
 好了,我们知道当用户勾选了一列之后,action和reduce要怎么做了.
 
 但是如何在View中定义何时发送action creator的请求呢?
 
+之前在第三点说过,任何的action和store都是从顶级逐渐往下传递的
 
+所以我们先定义顶层的`ActivityOrder`
+
+```javascript
+ class ActivityOrder extends Component {
+        render() {
+            const {orderUsers,actions} = this.props
+            return (
+                <section className="entry_list">
+                    <OrderTab />
+                    <OrderUserCount orderUsersLength={orderUsers.length}/>
+                    <OrderTable selectOrderUser={actions.selecOrdertUser} orderUsers={orderUsers}/>
+                    <OrderButtom orderUsers={orderUsers}/>
+                </section>
+            )
+        }
+    }
+
+    function mapStateToProps(state) {
+        return {
+            orderUsers: state.orderUsers
+        }
+    }
+
+    function mapDispatchToProps(dispatch) {
+        return {
+            actions: bindActionCreators(UserAction,dispatch)
+        }
+    }
+
+    exports.ActivityOrder = connect(
+        mapStateToProps,
+        mapDispatchToProps
+    )(ActivityOrder);
+```
 
 ## 使用步骤
 

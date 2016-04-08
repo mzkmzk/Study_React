@@ -202,3 +202,7 @@ class OrderTableBody extends Component {
 3. `selectOrderUser`: 这里的`selectOrderUser`就是在action creator中定义的方法
 
 
+## 9. 总结开发步骤
+
+1. 划分组件,把重构师的HTML复制过去各组件
+2. 

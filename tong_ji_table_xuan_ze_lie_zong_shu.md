@@ -149,6 +149,8 @@ exports.selecOrdertUser = function(id){
 4. `const {orderUsers,actions} = this.props`: 容器中根据`this.props`获取的就是`mapStateToProps`和`mapDispatchToProps`返回的对象.
 
 
+
+
 ## 使用步骤
 
 1. 等待重构师出HTML静态页面

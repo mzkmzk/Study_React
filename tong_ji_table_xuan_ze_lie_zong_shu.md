@@ -76,6 +76,8 @@ exports.orderUsers = function(state = initialState , action) {
 
 当用户勾选时,只需要知道这是哪一列被勾选了即可改变store.
 
+reduce里都会返回一个完整的全局state,我们只需要筛选出被勾选的那列,然后对其`selected`属性取反即可
+
 
 
 ## 使用步骤

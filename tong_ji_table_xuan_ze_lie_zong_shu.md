@@ -198,6 +198,8 @@ class OrderTableBody extends Component {
 
 1. `const { orderUsers, selectOrderUser } = this.props`: orderUsers, selectOrderUser都是从容器中一级级传递下来的
 2. `className={classnames({ico: true ,selected: orderUser.selected})}`: 例如`selected: orderUser.selected`,当`orderUser.selected`为true时,selected这个class就显示
+
+
 ## 使用步骤
 
 1. 等待重构师出HTML静态页面

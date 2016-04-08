@@ -43,6 +43,12 @@ Views通过用户的交互而触发了`Action Creators`
 
 然后容器可以根据组件所要满足的功能,然后一层层的把部分`action creator`和`state`往组件传递
 
+## 4. 思考store对象内容
+
+这个例子比较简单
+
+顶级的store只需要保存一个`rderUsers`数组即可
+
 
 
 ## 使用步骤

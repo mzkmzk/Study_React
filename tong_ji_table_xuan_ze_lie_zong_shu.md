@@ -20,7 +20,7 @@ Views通过用户的交互而触发了`Action Creators`
 
 
 功能:
-
+tou't
 1. 左上角有统计总人数
 2. 人数列可以勾选上
 3. 左下角有统计勾选的人数
@@ -198,5 +198,6 @@ class OrderTableBody extends Component {
 
 1. `const { orderUsers, selectOrderUser } = this.props`: orderUsers, selectOrderUser都是从容器中一级级传递下来的
 2. `className={classnames({ico: true ,selected: orderUser.selected})}`: 例如`selected: orderUser.selected`,当`orderUser.selected`为true时,selected这个class就显示
+3. `selectOrderUser`: 这里的`selectOrderUser`就是在action creator中定义的方法
 
 

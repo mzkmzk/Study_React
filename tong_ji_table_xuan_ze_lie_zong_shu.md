@@ -28,4 +28,4 @@ Views通过用户的交互而触发了`Action Creators`
 ## 3. 分解View模块
 
 ![View分解](QQ20160408-5.png)
-
+把View分解成这样的组件,

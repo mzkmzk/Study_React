@@ -49,6 +49,8 @@ Views通过用户的交互而触发了`Action Creators`
 
 顶级的store只需要保存一个`rderUsers`数组即可
 
+![store](QQ20160408-6.png)
+
 
 
 ## 使用步骤

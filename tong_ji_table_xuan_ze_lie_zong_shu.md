@@ -205,4 +205,6 @@ class OrderTableBody extends Component {
 ## 9. 总结开发步骤
 
 1. 划分组件,把重构师的HTML复制过去各组件
-2. 
+2. 思考store形式,定义好reduce
+3. 根据reduce写出action
+4. 在容器顶端分发state和action到各组件去.

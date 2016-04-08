@@ -147,6 +147,9 @@ exports.selecOrdertUser = function(id){
 2. `mapDispatchToProps`: 返回的值就是`actions`,容器就可以获取到所有的actions中定义的`action creators`
 3. `connect(mapStateToProps,mapDispatchToProps)(ActivityOrder)`: 这里可以简单的理解为,把Redux定义的这两个方法和容器绑定起来
 4. `const {orderUsers,actions} = this.props`: 容器中根据`this.props`获取的就是`mapStateToProps`和`mapDispatchToProps`返回的对象.
+5. 容器就根据全局状态和action,分配给各主键向下传递
+
+
 
 
 

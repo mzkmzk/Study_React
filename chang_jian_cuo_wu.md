@@ -95,3 +95,5 @@ switch (action.type) {
 ```
 
 这样的话,store中的state也会改变,但是为什么呢?难道他们背后有什么肮脏的交易吗
+
+后续分析:`Object.assign`究竟做了什么鬼

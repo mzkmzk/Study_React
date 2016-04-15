@@ -53,3 +53,7 @@ React为什么建议我们这样做,是为了让li更快的排序和摧毁.(笔�
 参考资料
 
 <http://facebook.github.io/react/docs/multiple-components.html#dynamic-children>
+
+## 2. reduce传统方式改变state
+
+问题: 

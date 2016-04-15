@@ -56,4 +56,42 @@ React为什么建议我们这样做,是为了让li更快的排序和摧毁.(笔�
 
 ## 2. reduce传统方式改变state
 
-问题: 
+问题: 在reduce中,我要改变state的一个对象users,里面存放着数组
+
+代码: 
+
+```javascript
+ switch (action.type) {
+            case 'SELECT_USER' :
+                state.users = state.users.map(user =>
+                    user.id === action.id ?
+                        Object.assign({},user,{selected: ! user.selected}) :
+                        user);
+                console.log(state);
+                return  state;
+            default:
+                return state;
+        }
+```
+
+疑问: 
+
+在`console`显示出的state是正常的,但是store中的state并没有发生改变
+
+修正:
+
+```javascript
+switch (action.type) {
+            case 'SELECT_USER' :
+                let users = state.users.map(user =>
+                    user.id === action.id ?
+                        Object.assign({},user,{selected: ! user.selected}) :
+                        user);
+                return  Object.assign({},state,{users: users})
+
+            default:
+                return state;
+        }
+```
+
+这样的话,store中的state也会改变,但是为什么呢?难道他们背后有什么肮脏的交易吗

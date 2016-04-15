@@ -82,16 +82,16 @@ React为什么建议我们这样做,是为了让li更快的排序和摧毁.(笔�
 
 ```javascript
 switch (action.type) {
-            case 'SELECT_USER' :
-                let users = state.users.map(user =>
-                    user.id === action.id ?
-                        Object.assign({},user,{selected: ! user.selected}) :
-                        user);
-                return  Object.assign({},state,{users: users})
+    case 'SELECT_USER' :
+        let users = state.users.map(user =>
+            user.id === action.id ?
+                Object.assign({},user,{selected: ! user.selected}) :
+                user);
+        return  Object.assign({},state,{users: users})
 
-            default:
-                return state;
-        }
+    default:
+        return state;
+}
 ```
 
 这样的话,store中的state也会改变,但是为什么呢?难道他们背后有什么肮脏的交易吗

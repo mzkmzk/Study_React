@@ -83,7 +83,7 @@ React为什么建议我们这样做,是为了让li更快的排序和摧毁.(笔�
 ```javascript
 switch (action.type) {
     case 'SELECT_USER' :
-        let users = state.users.map(user =>
+        const users = state.users.map(user =>
             user.id === action.id ?
                 Object.assign({},user,{selected: ! user.selected}) :
                 user);

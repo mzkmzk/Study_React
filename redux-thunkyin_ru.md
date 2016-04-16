@@ -28,3 +28,5 @@ function thunkMiddleware(_ref) {
 
 module.exports = thunkMiddleware;
 ```
+
+代码的具体可以参考<https://github.com/react-guide/redux-tutorial-cn/blob/master/09_middleware.js>

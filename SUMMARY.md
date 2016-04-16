@@ -10,6 +10,7 @@
    * [基础API](ji_chu_api.md)
 * [源码分析](yuan_ma_fen_xi.md)
 * [常见错误](chang_jian_cuo_wu.md)
+   * redux-thunk引入
 * [常用站点](chang_yong_zhan_dian.md)
 * [Redux](redux.md)
    * [API](api.md)

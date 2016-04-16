@@ -87,3 +87,11 @@ function applyMiddleware() {
     };
 }
 ```
+
+出错的位置在
+
+```javascript
+chain = middlewares.map(function (middleware) {
+    return middleware(middlewareAPI);
+});
+```

@@ -37,7 +37,7 @@ define(function(require,exports) {
     }
 ```
 
-其实就是ajax不能直接引用,然后在回调函数中返回action的
+redux不允许ajax不能直接引用,然后在回调函数中返回action的
 
 
 

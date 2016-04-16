@@ -95,3 +95,30 @@ chain = middlewares.map(function (middleware) {
     return middleware(middlewareAPI);
 });
 ```
+
+说的是找不到需要迭代的`函数`
+
+`函数`是关键
+
+再看看store中是如何配置的
+
+```javascript
+...
+const  thunkMiddleware = require('redux-thunk');
+
+    exports.configureStore = function(initialState){
+        const store = createStore(order,initialState,applyMiddleware(thunkMiddleware));
+
+        return store;
+    }
+```
+
+原来`const  thunkMiddleware = require('redux-thunk');`
+
+这样引入是整个js文件引入过来啊...这样给redux是一个js文件而非函数
+
+## 3.解决方案
+
+在sotre中引入时
+
+` const  {thunkMiddleware} = require('redux-thunk');` 即可..

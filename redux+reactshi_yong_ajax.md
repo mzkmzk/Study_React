@@ -29,11 +29,6 @@ define(function(require,exports) {
     }
 
   exports.loadUsers = function(){
-      const param = {
-          activity_id: 4583,
-          application_status: 1,
-          pay_status: 2,
-      }
         return (dispatch, getState) => {
             return $.getJSON(url,param,function(result){
                 dispatch(getUser(result));

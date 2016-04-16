@@ -41,5 +41,5 @@ redux不允许ajax不能直接引用,然后在回调函数中返回action的
 
 必须像这样
 
-return 一个
+你不能直接在ajax中return,而是需要在ajax中 dispatch别的action
 

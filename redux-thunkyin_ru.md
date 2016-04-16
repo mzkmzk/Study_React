@@ -55,4 +55,35 @@ define(function (require, exports) {
 
 `middleware is not a function`
 
+看看报错的函数
 
+```javascript
+function applyMiddleware() {
+    for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
+        middlewares[_key] = arguments[_key];
+    }
+
+    return function (createStore) {
+        return function (reducer, initialState, enhancer) {
+            var store = createStore(reducer, initialState, enhancer);
+            var _dispatch = store.dispatch;
+            var chain = [];
+
+            var middlewareAPI = {
+                getState: store.getState,
+                dispatch: function dispatch(action) {
+                    return _dispatch(action);
+                }
+            };
+            chain = middlewares.map(function (middleware) {
+                return middleware(middlewareAPI);
+            });
+            _dispatch = _compose2["default"].apply(undefined, chain)(store.dispatch);
+
+            return _extends({}, store, {
+                dispatch: _dispatch
+            });
+        };
+    };
+}
+```

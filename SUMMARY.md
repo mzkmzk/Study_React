@@ -7,6 +7,7 @@
        * [JSX_Hello_World](jsxhello_world.md)
    * [知识点](zhi_shi_dian.md)
        * [React声明周期和props & state](sheng_ming_zhou_qi_he_props_&_state.md)
+       * Redux+React使用ajax
    * [基础API](ji_chu_api.md)
 * [源码分析](yuan_ma_fen_xi.md)
 * [常见错误](chang_jian_cuo_wu.md)

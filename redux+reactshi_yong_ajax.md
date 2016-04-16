@@ -43,3 +43,5 @@ redux不允许ajax不能直接引用,然后在回调函数中返回action的
 
 你不能直接在ajax中return,而是需要在ajax中 dispatch别的action
 
+但是这只是简单后,ajax的前后前中后我们都需要设置,看后文React+Redux+Ajax 应用进阶
+

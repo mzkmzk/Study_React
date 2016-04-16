@@ -30,3 +30,27 @@ module.exports = thunkMiddleware;
 ```
 
 代码的具体作用可以参考<https://github.com/react-guide/redux-tutorial-cn/blob/master/09_middleware.js>
+
+为了我们自己项目的`requirejs`就改成了
+
+```javascript
+'use strict';
+
+define(function (require, exports) {
+    function thunkMiddleware(_ref) {
+        var dispatch = _ref.dispatch;
+        var getState = _ref.getState;
+
+        return function (next) {
+            return function (action) {
+                return typeof action === 'function' ? action(dispatch, getState) : next(action);
+            };
+        };
+    }
+    exports.thunkMiddleware = thunkMiddleware;
+});
+```
+
+然后 浏览器就开始报错了.
+
+

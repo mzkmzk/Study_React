@@ -53,4 +53,6 @@ define(function (require, exports) {
 
 然后 浏览器就开始报错了.
 
+`middleware is not a function`
+
 

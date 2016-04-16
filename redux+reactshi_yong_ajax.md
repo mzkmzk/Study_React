@@ -29,7 +29,7 @@ define(function(require,exports) {
     }
 
   exports.loadUsers = function(){
-        return (dispatch, getState) => {
+        (dispatch, getState) => {
             return $.getJSON(url,param,function(result){
                 dispatch(getUser(result));
             });
@@ -39,5 +39,7 @@ define(function(require,exports) {
 
 redux不允许ajax不能直接引用,然后在回调函数中返回action的
 
+必须像这样
 
+return 一个
 
